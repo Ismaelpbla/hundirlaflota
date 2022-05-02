@@ -51,6 +51,8 @@ To put the ships randomly in both boards (player's board and IA's board) we use 
 - **posicionar_todos** . The function position_all writes to the board the number of ships of a given size through the previously defined function *posicionar_barco*.
 
 ### How it works?
+
+![img](https://github.com/Ismaelpbla/hundirlaflota/blob/main/imagenes/diagrama%201.jpg?raw=true)
 ## The Game
 
 To make the game works we need to create a class. This class consist of:
@@ -61,9 +63,12 @@ To make the game works we need to create a class. This class consist of:
 - a shot_order_machine method in which the machine randomly decides two coordinates X and Y
 - A check_shot_machine method that checks if the machine coordinates hit the player's ships or not.
 
+![img](https://github.com/Ismaelpbla/hundirlaflota/blob/main/imagenes/diagrama%202.jpg?raw=true)
+
 Once the class were made, we have to make a main script where the game will works. To make this we:
 - First, create the variables *vida_jugador* and *vida_maquina* which are the variables who start the "while" loop and break it when the variables reach the value of 0.
 - After the "while" loop we call the shot_order method to claim a coordenate and the check_shot method to check if the coordinate hit or not.
 - Now, could happend two situations: That the coordinate hits a ship, or not. In both situations we enter or exit to the if loop thorugh a control variable called *tocado*. So if tocado is True the player continue playing and if not the IA starts its turn.
 - In the IA turn occurs the same with only one difference: The coordinates will be generated randomly.
 - When the IA or the player hits a ship, we removed a value of 1 to the variables vida_jugador or vida_maquina. So when one of this variables reach 0, the while loop breaks and the game end.
+![img](https://github.com/Ismaelpbla/hundirlaflota/blob/main/imagenes/diagrama%203.jpg?raw=true)
